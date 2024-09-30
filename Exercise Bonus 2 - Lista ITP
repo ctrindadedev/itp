@@ -1,0 +1,41 @@
+// Exercio converso de temperaturas A conversão entre as escalas pode ser feita com as seguintes equações : K = C + 273.15 F = C * 1.8 + 32
+
+// Exercio converso de temperaturas A conversão entre as escalas pode ser feita com as seguintes equações : K = C + 273.15 F = C * 1.8 + 32
+#include <stdio.h>
+#include <stdlib.h>
+int main(int argc, char const argv[])
+{
+    char tipo;
+    float temperatura;
+    fflush(stdin);
+    scanf("%f %c", &temperatura, &tipo);
+    if (tipo == 'C')
+    {
+        float cparaf, cparak;
+        cparaf = (temperatura * 1.8) + 32;
+        cparak = temperatura + 273.15;
+        printf("Celsius: %.2f\n", temperatura);
+        printf("Farenheit: %.2f \n", cparaf);
+        printf("Kelvin: %.2f \n", cparak);
+    }
+    if (tipo == 'F')
+    {
+        float fparac, fparak;
+        fparac = (temperatura - 32) / 1.8;
+        fparak = ((temperatura - 32) / 1.8) + 273.15;
+        printf("Celsius: %.2f \n", fparac);
+        printf("Farenheit: %.2f \n", temperatura);
+        printf("Kelvin: %.2f \n", fparak);
+    }
+    if (tipo == 'K')
+    {
+        float kparac, kparaf;
+        kparac = temperatura - 273.15;
+        kparaf = ((temperatura - 273.15) * 1.8) + 32;
+        printf("Celsius: %.2f \n", kparac);
+        printf("Farenheit: %.2f \n", kparaf);
+        printf("Kelvin: %.2f \n", temperatura);
+    }
+
+    return 0;
+}
