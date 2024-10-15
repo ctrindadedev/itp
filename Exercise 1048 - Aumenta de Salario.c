@@ -5,7 +5,7 @@ void reajuste_salario(double salario, double porcentagem)
 {
     printf("Novo salario: %.2lf\n", salario + salario * porcentagem);
     printf("Reajuste ganho: %.2lf\n", salario * porcentagem);
-    printf("Em percentual %.0lf %%\n", porcentagem * 100);
+    printf("Em percentual: %.0lf %%\n", porcentagem * 100);
 }
 
 int main(void)
