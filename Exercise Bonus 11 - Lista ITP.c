@@ -35,11 +35,11 @@ int main(int argc, char const *argv[])
         for (int i = 0; i < quantidepre; i++)
         {
             int prefix_len = strlen(prefixos[i]);
-            if (strncmp(palavra, prefixos[i], prefix_len) == 0)
-            { // Verifica se o prefixo está no início da palavra
-                memmove(palavra, palavra + prefix_len, strlen(palavra) - prefix_len + 1);
-                break; // Para remover apenas o primeiro prefixo encontrado
+            if (strncmp(palavra, prefixos[i], prefix_len) == 0) // Verifica se o prefixo está no início da palavra utilizando a função de igualdade de strings em c 
+            {
+                memmove(palavra, palavra + prefix_len, strlen(palavra) - prefix_len + 1); // Função para remover apenas o primeiro prefixo encontrado
             }
+                break;
         }
 
         // Remover sufixo
@@ -47,7 +47,7 @@ int main(int argc, char const *argv[])
         {
             int suffix_len = strlen(sufixos[i]);
             int word_len = strlen(palavra);
-            if (word_len >= suffix_len && strcmp(palavra + word_len - suffix_len, sufixos[i]) == 0)
+            if (word_len >= suffix_len && strcmp(palavra + word_len - suffix_len, sufixos[i] ) == 0) //Após o strcmp é feito o uso de ponterios. 
             { // Verifica se o sufixo está no final da palavra
                 palavra[word_len - suffix_len] = '\0';
                 break; // Para remover apenas o primeiro sufixo encontrado
